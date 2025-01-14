@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-export default function QuoteForm() {
+interface QuoteFormProps {
+  className?: string;
+}
+
+export default function QuoteForm({ className }: QuoteFormProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',

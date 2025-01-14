@@ -26,4 +26,5 @@ export const ASSETS = {
   beachBackground,
   facebookLogo,
   linkedinLogo,
+  hpLogo: hoffmangruppeLogo,
 };

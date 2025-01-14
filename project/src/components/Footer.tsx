@@ -1,5 +1,6 @@
 import hoffmangruppeLogo from '/src/assets/HP logo.jpg';
 import kbLogo from '/src/assets/K&B.png';
+import { MapPinIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,7 +10,6 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         {/* Main Footer Content */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-          {/* Company Info */}
           {/* Company Info */}
           <div className="space-y-8">
             <div className="flex items-center space-x-8">
@@ -30,15 +30,33 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className="text-silver text-base leading-relaxed">
-              Your trusted partner in promotional product solutions, delivering excellence through innovative branding strategies.
-            </p>
+            <div className="mt-8 space-y-4">
+              <div className="flex items-center space-x-4">
+                <MapPinIcon className="h-5 w-5 text-silver" />
+                <span className="text-silver">1234 Business Rd, Cincinnati, OH 45242</span>
+              </div>
+              <div className="flex items-center space-x-4">
+                <PhoneIcon className="h-5 w-5 text-silver" />
+                <span className="text-silver">+1 (513) 555-1234</span>
+              </div>
+              <div className="flex items-center space-x-4">
+                <EnvelopeIcon className="h-5 w-5 text-silver" />
+                <span className="text-silver">info@hoffmangruppe.com</span>
+              </div>
+              <div className="flex space-x-4 pt-4">
+                <a href="https://www.facebook.com/hoffmangruppe" target="_blank" rel="noopener noreferrer">
+                  <img src="/src/assets/facebook-logo.png" alt="Facebook" className="h-6 w-6 hover:opacity-80 transition-opacity" />
+                </a>
+                <a href="https://www.linkedin.com/company/hoffmangruppe" target="_blank" rel="noopener noreferrer">
+                  <img src="/src/assets/linkedin-logo.png" alt="LinkedIn" className="h-6 w-6 hover:opacity-80 transition-opacity" />
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Rest of the footer content remains the same */}
         </div>
 
-        {/* Footer Bottom */}
         {/* Footer Bottom */}
         <div className="border-t border-night-600 py-8 mt-12">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
