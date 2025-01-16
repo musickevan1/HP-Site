@@ -10,6 +10,7 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  assetsInclude: ['**/*.pdf'],
   server: {
     port: 5185,
     strictPort: true,
