@@ -3,8 +3,7 @@
   "build": {
     "env": {
       "NODE_ENV": "production"
-    },
-    "nodeVersion": "20.x"
+    }
   },
   "routes": [
     {
