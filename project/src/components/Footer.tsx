@@ -37,11 +37,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-4">
                 <PhoneIcon className="h-5 w-5 text-silver" />
-                <span className="text-silver">+1 (513) 555-1234</span>
+                <a href="tel:+15135551234" className="text-silver hover:text-white transition-colors">+1 (513) 555-1234</a>
               </div>
               <div className="flex items-center space-x-4">
                 <EnvelopeIcon className="h-5 w-5 text-silver" />
-                <span className="text-silver">info@hoffmangruppe.com</span>
+                <a href="mailto:info@hoffmangruppe.com" className="text-silver hover:text-white transition-colors">info@hoffmangruppe.com</a>
               </div>
               <div className="flex space-x-4 pt-4">
                 <a href="https://www.facebook.com/hoffmangruppe" target="_blank" rel="noopener noreferrer">

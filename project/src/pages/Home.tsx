@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Package, Users, TrendingUp } from 'lucide-react';
+import { ASSETS } from '../constants';
 
 export default function Home() {
   return (
@@ -73,8 +74,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
+                title: 'Sportswear Collection',
+                image: ASSETS.ssbrands,
+                link: '/products/sportswear'
+              },
+              {
                 title: 'Company Casuals',
-                image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&q=80',
+                image: ASSETS.sanmarbrands,
                 link: '/products/casuals'
               },
               {
@@ -86,31 +92,33 @@ export default function Home() {
                 title: 'K&B Windjammer',
                 image: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&q=80',
                 link: '/products/windjammer'
-              },
-              {
-                title: 'Custom Solutions',
-                image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80',
-                link: '/products/custom'
               }
             ].map((category) => (
-              <a
+              <div
                 key={category.title}
-                href={category.link}
-                className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+                className="flex flex-col h-full p-4 sm:p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="aspect-w-1 aspect-h-1">
-                  <img
-                    src={category.image}
-                    alt={category.title}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <h3 className="text-white text-xl font-semibold p-6">
-                    {category.title}
-                  </h3>
-                </div>
-              </a>
+                <img
+                  src={category.image}
+                  alt={category.title}
+                  className="w-full h-48 object-cover mb-4 sm:mb-6 rounded-lg"
+                />
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
+                  {category.title}
+                </h3>
+                <p className="text-gray-600 text-lg sm:text-lg mb-4 sm:mb-6 flex-grow">
+                  Premium athletic and casual wear for your brand
+                </p>
+                <a
+                  href={category.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 group-hover:translate-x-2 transition-all text-lg sm:text-lg"
+                >
+                  View Catalog
+                  <ArrowRight className="ml-2 h-6 w-6" />
+                </a>
+              </div>
             ))}
           </div>
         </div>

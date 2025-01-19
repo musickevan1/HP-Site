@@ -19,6 +19,8 @@ import kbLogo from '../assets/K&B.png';
 import beachBackground from '../assets/bg.jpg';
 import facebookLogo from '../assets/facebook-logo.png';
 import linkedinLogo from '../assets/linkedin-logo.png';
+import ssbrands from '../assets/ssbrands.jpg';
+import sanmarbrands from '../assets/sanmarbrands.jpg';
 
 export const ASSETS = {
   hoffmangruppeLogo,
@@ -27,4 +29,6 @@ export const ASSETS = {
   facebookLogo,
   linkedinLogo,
   hpLogo: hoffmangruppeLogo,
+  ssbrands,
+  sanmarbrands
 };
